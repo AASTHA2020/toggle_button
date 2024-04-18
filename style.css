@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4070f4;
+  background-image: url("images/4243126.jpg");
+  background-size: cover; /* Set background size to cover */
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+body.dark {
+  background-color: #18191a;
+  background-image: url("images/3152.jpg");
+}
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Aligns content at the bottom */
+  height: 130px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle::before {
+  content: "";
+  background-image: url("images/sun-1846 (2).png");
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  background-color: #4070f4;
+  border-radius: 50%;
+  top: 10%;
+  left: 60px;
+  transform: translate(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.toggle.active::before {
+  background-color: #18191a;
+  background-image: url("images/moon-6695.png");
+  left: calc(120% - 110px - 10px);
+}
